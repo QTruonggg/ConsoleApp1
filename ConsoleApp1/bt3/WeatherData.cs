@@ -8,5 +8,9 @@ namespace ConsoleApp1.bt3
 {
     internal class WeatherData
     {
+        public string Name { get; set; }
+        public Main Mainn { get; set; }
+        public Weather[] Weather { get; set; }
+        public object Main { get; internal set; }
     }
 }
