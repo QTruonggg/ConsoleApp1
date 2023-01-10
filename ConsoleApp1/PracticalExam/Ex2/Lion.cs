@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.PracticalExam.Ex2
 {
-    internal class Lion
+    public class Lion : Animal
     {
+        public Lion(double weight, string name) : base(weight, name) { }
     }
 }

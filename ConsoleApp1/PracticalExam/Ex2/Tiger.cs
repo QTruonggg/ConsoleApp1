@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.PracticalExam.Ex2
 {
-    internal class Tiger
+    public class Tiger : Animal
     {
+        public Tiger(double weight, string name) : base(weight, name) { }
     }
 }
