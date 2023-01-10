@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.PracticalExam.GeometryExample
 {
-    internal class GeometryExample
+    public class GeometryExample
     {
+        static void Main(string[] args)
+        {
+            Cylinder cylinder = new Cylinder();
+            cylinder.Process(3, 4);
+            cylinder.Result();
+        }
     }
 }
