@@ -8,29 +8,45 @@ namespace ConsoleApp1.PracticalExam.GeometryExample
 {
     public class Cylinder
     {
-        private double baseArea;
-        private double lateralArea;
-        private double totalArea;
-        private double volume;
-        private double radius;
-        private double height;
+        public double Radius { get; set; }
+        public double Height { get; set; }
+        public double BaseArea { get; private set; }
+        public double LateralArea { get; private set; }
+        public double TotalArea { get; private set; }
+        public double Volume { get; private set; }
+        public Cylinder() { }
 
-        public void Process(double r, double h)
+        public Cylinder(double radius, double height)
         {
-            radius = r;
-            height = h;
-            baseArea = Math.PI * radius * radius;
-            lateralArea = 2 * Math.PI * radius * height;
-            totalArea = 2 * Math.PI * radius * (radius + height);
-            volume = Math.PI * radius * radius * height;
+            Radius = radius;
+            Height = height;
         }
 
-        public void Result()
+
+        public void Input()
         {
-            Console.WriteLine("Base Area: " + baseArea);
-            Console.WriteLine("Lateral Area: " + lateralArea);
-            Console.WriteLine("Total Area: " + totalArea);
-            Console.WriteLine("Volume: " + volume);
+            Console.WriteLine("Enter the dimenstions of the cylinder");
+            Console.Write("Radius: ");
+            Radius = double.Parse(Console.ReadLine());
+            Console.Write("Height: ");
+            Height = double.Parse(Console.ReadLine());
+        }
+
+
+        public void Process(double Radius, double Height)
+        {
+            BaseArea = Math.PI * Radius * Radius;
+            LateralArea = 2 * Math.PI * Radius * Height;
+            TotalArea = 2 * Math.PI * Radius * (Height + Radius);
+            Volume = Math.PI * Radius * Radius * Height;
+        }
+
+        public string Result()
+        {
+            return "Base Area: " + Math.Round(BaseArea, 2) + " | " +
+           "Lateral Area: " + Math.Round(LateralArea, 2) + " | " +
+           "Total Area: " + Math.Round(TotalArea, 2) + " | " +
+           "Volume: " + Math.Round(Volume, 2);
         }
     }
 }

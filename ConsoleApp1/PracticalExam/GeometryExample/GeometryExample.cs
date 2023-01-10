@@ -11,8 +11,10 @@ namespace ConsoleApp1.PracticalExam.GeometryExample
         static void Main(string[] args)
         {
             Cylinder cylinder = new Cylinder();
-            cylinder.Process(3, 4);
-            cylinder.Result();
+            cylinder.Input();
+            cylinder.Process(cylinder.Radius, cylinder.Height);
+            Console.WriteLine("Cylinder Characteristics: ");
+            Console.WriteLine(cylinder.Result());
         }
     }
 }
