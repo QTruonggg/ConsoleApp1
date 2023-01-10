@@ -17,8 +17,7 @@ namespace ConsoleApp1.PracticalExam.Ex2
 
         public void Show()
         {
-            Console.WriteLine("Name: " + name);
-            Console.WriteLine("Weight: " + weight);
+            Console.WriteLine("Name: " + name + ", " + "Weight: " + weight);
         }
 
         public void SetMe(double weight, string name)

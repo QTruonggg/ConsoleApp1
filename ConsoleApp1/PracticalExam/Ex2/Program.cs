@@ -10,9 +10,9 @@ namespace ConsoleApp1.PracticalExam.Ex2
     {
         static void Main(string[] args)
         {
-            Animal a = new Lion(250, "Lion");
+            Animal a = new Tiger(100, "Tiger");
             a.Show();
-            a = new Tiger(200, "Tiger");
+            a = new Lion(200, "Lion");
             a.Show();
         }
     }
